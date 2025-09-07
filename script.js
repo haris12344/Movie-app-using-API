@@ -39,11 +39,11 @@ function SearchMovie(){
         genre.innerText = data.Genre;
         imdbRatings.innerText = data.imdbRating;
         poster.src = data.Poster;
-        if(data.imdbRating > 7.5) {
+        if(data.imdbRating >= 7.5) {
             suggestion.innerText = 'Worth Watching';
             suggestion.style.backgroundColor = 'green'
         }
-        else if(data.imdbRating > 6 && data.imdbRating < 7.5) {
+        else if(data.imdbRating >= 6 && data.imdbRating < 7.5) {
             suggestion.innerText = 'Average';
             suggestion.style.backgroundColor = 'Yellow'
         }
