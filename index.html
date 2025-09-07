@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOVIE APP.</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header mx-auto mt-7">
+        <div class="flex justify-center">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/500px-Netflix_2015_N_logo.svg.png?20221130064001" class="h-[40px]"></div>
+            <h1 class="text-neutral-100 text-3xl font-bold mt-2">Search unlimited movies, TV shows and more</h1>
+            <p class="text-neutral-300 text-xl font-semibold mt-0.5">Ready to watch? Enter your movie name.</p>
+        <div class="flex mt-4">
+            <input type="text" placeholder="Search for movie..." id="MovieName">
+            <button class="button" onclick="SearchMovie()">Search</button>
+        </div>
+    </div>
+
+    <div id="container" class="w-[700px] mx-auto mt-13 p-2">
+        <div class="flex gap-2 text-neutral-100 items-center">
+            <div>
+            <h1 id="Title" class="text-2xl font-bold"></h1>
+            <p id="Plot" class="my-1"></p>
+            <p class="my-1">Actors : <span id="Actors" class="text-neutral-300"></span></p>
+            <p class="my-1">Director : <span id="Director" class="text-neutral-300"></span></p>
+            <p class="my-1">Awards : <span id="Awards" class="text-neutral-300"></span></p>
+            <p class="my-1">Language : <span id="Language" class="text-neutral-300"></span></p>
+            <p class="my-1">BoxOffice : <span id="BoxOffice" class="text-neutral-300"></span></p>
+            <p class="my-1">Genre : <span id="Genre" class="text-neutral-300"></span></p>
+            <p class="my-1">imdb Ratings : <span id="imdbRatings" class="text-neutral-300"></span></p>
+            <p class="my-1">Year : <span id="Year" class="text-neutral-300"></span></p>
+            </div>
+            <div class="banner relative">
+            <img id="poster" class="rounded-xl h-[350px] w-[750px]">
+            <div class="Suggestion absolute top-0 left-0 py-1 px-4 bg-gray-100/50 m-1.5 rounded-xl text-black text-md font-bold"></div>
+            </div>
+        </div>
+    </div>
+
+    <h1 id="error" class="text-center text-3xl font-bold my-36 text-neutral-100"></h1>
+    <script src="script.js"></script>
+</body>
+</html>
